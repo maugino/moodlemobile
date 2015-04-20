@@ -1,5 +1,5 @@
-{
-"name": "Moodle Mobile",
+﻿{
+"name": "BeeSpoke STP",
 "license": {
     "name": "Apache 2.0",
     "link": "http://www.apache.org/licenses/LICENSE-2.0"
@@ -9,6 +9,11 @@
     "fullname": "Juan Leyva",
     "contribution": "Main developer",
     "company": "CV&A Consulting"
+},
+{
+    "fullname": "Chris Maugino",
+    "contribution": Customiser",
+    "company": "Bee Spoke"
 },
 {
     "fullname": "Josep Maria Gifreu",

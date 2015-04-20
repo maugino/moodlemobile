@@ -1,5 +1,5 @@
 {
-  "name": "Moodle Mobile for desktop",
+  "name": "BeeSpoke STP for desktop",
   "main": "index.html",
   "window": {
     "title": "Moodle Mobile for desktop",
@@ -12,5 +12,5 @@
     "resizable": false
   },
   "plugin": true,
-  "description": "Moodle Mobile for desktop"
+  "description": "BeeSpoke STP for desktop"
 }
