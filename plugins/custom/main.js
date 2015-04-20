@@ -1,4 +1,4 @@
-﻿var templates = [
+var templates = [
 "root/externallib/text!root/plugins/custom/theme.css",
 "root/externallib/text!root/plugins/custom/login.html",
 "root/externallib/text!root/plugins/custom/program.html"
@@ -15,12 +15,12 @@ component: "core"
 }
 },
 routes: [
-["custom", "show_program", "showProgram"]
+["mootes14", "show_program", "showProgram"]
 ],
 showProgram: function() {
 var tpl = {};
 var html = MM.tpl.render(program, tpl);
-MM.panels.show('center', html, {title: MM.lang.s("custom")});
+MM.panels.show('center', html, {title: MM.lang.s("mootes14")});
 }
 };
 // Inject allways our custom theme.
