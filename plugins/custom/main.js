@@ -1,11 +1,32 @@
 var templates = [
-"root/externallib/text!root/plugins/custom/theme.css",
-"root/externallib/text!root/plugins/custom/login.html",
+	"root/externallib/text!root/plugins/custom/theme.css",
+	"root/externallib/text!root/plugins/custom/login.html",
 ];
 
 define(templates, function (theme, loginForm) {
+	var plugin = {
+		settings: {
+			name: "custom",
+			type: "general",
+			menuURL: "#custom",
+			icon: "plugins/events/icon.png",
+			lang: {
+				component: "core"
+			}
+		},
 
-	// Inject allways our custom theme.
+		routes: [
+			["custom", "show_program", "showProgram"]
+		],
+	
+		showProgram: function() {
+			var tpl = {};
+			var html = MM.tpl.render(program, tpl);
+			MM.panels.show('center', html, {title: MM.lang.s("mootes14")});
+		}
+	};
+
+	// Inject always our custom theme.
 	$("#mobilecssurl").html(theme);
 
 	// Replace the sign-up form with our custom template.
@@ -27,4 +48,5 @@ define(templates, function (theme, loginForm) {
 	};
 
 	MM.registerPlugin(plugin);
+
 });
