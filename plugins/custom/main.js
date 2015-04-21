@@ -3,7 +3,28 @@ var templates = [
 	"root/externallib/text!root/plugins/custom/login.html",
 ];
 
-define(templates, function (theme, loginForm) {
+define(templates, function (theme, loginForm,STP) {
+	var plugin = {
+		settings: {
+			name: "STP",
+			type: "general",
+			menuURL: "#STP",
+			icon: "img/website.png",
+			lang: {
+				component: "core"
+			}
+		},
+
+		routes: [
+			["custom", "show_program", "showProgram"]
+		],
+	
+		showProgram: function() {
+			var tpl = {};
+			var html = MM.tpl.render(program, tpl);
+			MM.panels.show('center', html, {title: MM.lang.s("chris")});
+		}
+	};
 
 	// Inject always our custom theme.
 	$("#mobilecssurl").html(theme);
