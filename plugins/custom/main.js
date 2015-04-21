@@ -3,16 +3,16 @@ var templates = [
 "root/externallib/text!root/plugins/custom/login.html",
 //"root/externallib/text!root/plugins/custom/program.html"
 ];
-define(templates, function (theme, loginForm, program) {
-var plugin = {
-settings: {
-name: "custom",
-type: "general",
-menuURL: "#custom",
-icon: "plugins/events/icon.png",
-lang: {
-component: "core"
-}
+//define(templates, function (theme, loginForm, program) {
+//var plugin = {
+//settings: {
+//name: "custom",
+//type: "general",
+//menuURL: "#custom",
+//icon: "plugins/events/icon.png",
+//lang: {
+//component: "core"
+//}
 },
 routes: [
 ["custom", "show_program", "showProgram"]
