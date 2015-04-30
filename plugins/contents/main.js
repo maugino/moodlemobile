@@ -10,7 +10,7 @@ define(templates,function (sectionsTpl, contentsTpl, folderTpl, mimeTypes) {
         settings: {
             name: "contents",
             type: "course",
-            menuURL: "#course/contents/",
+            menuURL: "#course/",
             lang: {
                 component: "core"
             },
@@ -38,7 +38,7 @@ define(templates,function (sectionsTpl, contentsTpl, folderTpl, mimeTypes) {
                 MM.panels.showLoading('right');
             }
             // Adding loading icon.
-            $('a[href="#course/contents/' +courseId+ '"]').addClass('loading-row');
+            $('a[href="#course/' +courseId+ '"]').addClass('loading-row');
 
             var data = {
                 'courseid': courseId
@@ -46,7 +46,7 @@ define(templates,function (sectionsTpl, contentsTpl, folderTpl, mimeTypes) {
 
             MM.moodleWSCall('core_course_get_contents', data, function(contents) {
                 // Removing loading icon.
-                $('a[href="#course/contents/' +courseId+ '"]').removeClass('loading-row');
+                $('a[href="#course/' +courseId+ '"]').removeClass('loading-row');
                 var course = MM.db.get("courses", MM.config.current_site.id + "-" + courseId);
 
                 var tpl = {
@@ -74,7 +74,7 @@ define(templates,function (sectionsTpl, contentsTpl, folderTpl, mimeTypes) {
             }, null, function(m) {
                 // Error callback.
                 // Removing loading icon.
-                $('a[href="#course/contents/' +courseId+ '"]').removeClass('loading-row');
+                $('a[href="#course/' +courseId+ '"]').removeClass('loading-row');
                 if (typeof(m) !== "undefined" && m) {
                     MM.popErrorMessage(m);
                 }
