@@ -10,7 +10,7 @@ define(templates,function (sectionsTpl, contentsTpl, folderTpl, mimeTypes) {
         settings: {
             name: "contents",
             type: "course",
-            menuURL: "#course/contents",
+            menuURL: "#course/contents/",
             lang: {
                 component: "core"
             },
